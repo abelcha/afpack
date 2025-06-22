@@ -1,0 +1,30 @@
+[package]
+name = "afpack"
+version = "0.1.0"
+edition = "2021"
+authors = ["Your Name <your.email@example.com>"]
+description = "CLI tool for managing large dependency folders using Apple Sparse Image Format (ASIF)"
+license = "MIT"
+repository = "https://github.com/yourusername/afpack"
+keywords = ["macos", "asif", "compression", "dependencies", "performance"]
+categories = ["command-line-utilities", "development-tools"]
+
+[lib]
+name = "afpack"
+path = "src/lib.rs"
+
+[[bin]]
+name = "afpack"
+path = "src/main.rs"
+
+[[example]]
+name = "diskimage_usage"
+path = "examples/diskimage_usage.rs"
+
+[dependencies]
+applesauce = "0.6.7"
+clap = { version = "4.0", features = ["derive"] }
+trash = "5.2.2"
+xshell = "0.2"
+
+[dev-dependencies]
